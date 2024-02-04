@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RETROWARE</string>
+    <string name="bienvenido">BIENVENIDO/A</string>
+    <string name="btnInfo">App Info.</string>
+    <string name="usuario">Indroduzca el nombre de usuario</string>
+    <string name="version">%s estás usando la versión 1.0 de %s</string>
+    <string name="app_info">Descripción de la aplicaión:</string>
+    <string name="descripcion">Your imageboard to share and download the best abandonware.</string>
+    <string name="error">No se encontraron apps instaladas para enviar correos.</string>
+
+</resources>
