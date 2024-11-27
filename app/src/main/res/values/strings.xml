@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RETROWARE</string>
+    <string name="BIENVENIDA">BIENVENIDO/A</string>
+    <string name="ALERTAINICIO">Introduce un usuario porfavor</string>
+    <string name="TEXTOUSERCREDIT">estás usando la versión 1 de RETROWARE</string>
+    <string name="TEXTOINFOAPP">Tu app para compartir y descargar el mejor abandonware.</string>
+
+
+
+</resources>
