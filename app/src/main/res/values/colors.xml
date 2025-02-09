@@ -5,4 +5,14 @@
     <color name="miazul"> #0a0889</color>
     <color name="miazulClaro">#03A9F4</color>
     <color name="celeste">#89DAFF</color>
+
+
+
+
+        <color name="green">#4CAF50</color>
+        <color name="red">#E91E63</color>
+        <color name="purple">#9C27B0</color>
+
+
+
 </resources>

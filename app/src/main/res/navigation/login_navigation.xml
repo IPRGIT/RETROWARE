@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/loginFragment2">
+
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.marisma.retroware.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+
+        <argument
+            android:name="user"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_tabNotice1"
+            app:destination="@id/tabNotice1" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.marisma.retroware.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabNotice1"
+        android:name="com.marisma.retroware.tabNotice1"
+        android:label="fragment_tab_notice1"
+        tools:layout="@layout/fragment_tab_notice1" />
+    <fragment
+        android:id="@+id/tabNotice2Fragment"
+        android:name="com.marisma.retroware.tabNotice2"
+        android:label="fragment_tab_notice2"
+        tools:layout="@layout/fragment_tab_notice2">
+    <action
+        android:id="@+id/action_tabNotice2Fragment_to_menuFragment"
+        app:destination="@id/menuFragment"/>
+
+</fragment>
+
+    <fragment
+        android:id="@+id/contenedorViewPagerFragment"
+        android:name="com.marisma.retroware.ViewPagerAMenuFragment"
+        android:label="fragment_contenedor_view_pager"
+        tools:layout="@layout/fragment_contenedor_view_pager" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.marisma.retroware.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu">
+
+        <argument
+            android:name="user"
+            app:argType="string"
+            android:defaultValue="Invitado/"/>
+    </fragment>
+
+
+
+
+</navigation>
+

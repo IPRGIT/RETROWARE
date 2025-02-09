@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/miazul"
+    tools:context=".LoginFragment">
+
+
+
+
+    <!-- Texto de bienvenida (20%) -->
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:text="@string/bienvenido"
+        android:textColor="@color/miazulClaro"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/imagenView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Imágen (40%) -->
+    <ImageView
+        android:id="@+id/imagenView"
+        android:src="@drawable/logo_rs"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="40sp"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+        />
+
+    <!-- Cuadro de texto con hint "usuario" (20%) -->
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20sp"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:hint="@string/usuario"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenView"/>
+
+    <!-- Botón para navegar al fragment MenuFragment (20%) -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_height="wrap_content"
+        android:theme="@style/Button.White"
+        android:text="@string/btnStart"
+        android:textSize="30sp"
+        android:textColor="@color/miazul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername"
+        android:layout_width="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

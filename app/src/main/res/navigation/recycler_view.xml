@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view">
+
+
+        <fragment
+            android:id="@+id/itemListFragment2"
+            android:name="com.marisma.retroware.ItemListFragment"
+            android:label="fragment_item_list"
+            tools:layout="@layout/fragment_item_list" />
+        <fragment
+            android:id="@+id/favItemListFragment3"
+            android:name="com.marisma.retroware.FavItemListFragment"
+            android:label="fragment_fav_item_list"
+            tools:layout="@layout/fragment_fav_item_list" />
+        <fragment
+            android:id="@+id/userInfoFragment3"
+            android:name="com.marisma.retroware.UserInfoFragment"
+            android:label="fragment_user_info"
+            tools:layout="@layout/fragment_user_info" />
+
+
+
+</navigation>

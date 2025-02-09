@@ -25,7 +25,7 @@ class CreditActivity : AppCompatActivity() {
         //creamos la cadena del saludo
         mensajeVersion.apply {
         //toma el valor de la cadena "version" y le incorpora el valor del usuario.
-        text = getString(R.string.version, usuario, getString(R.string.app_name))
+        text = getString(R.string.versioninfo, usuario, getString(R.string.app_name))
         }
 
         // Configurar el botón "Contactar"
@@ -45,40 +45,6 @@ class CreditActivity : AppCompatActivity() {
 
 
 
-
-//esto no funca
-/**
-        private fun enviarCorreo() {
-        val destinatario = "aipalacios@ieslamarisma.net"
-        val asunto = "Consulta de la app ${getString(R.string.app_name)}"
-
-        // Crea un Intent con la acción ACTION_SENDTO y el URI del correo electrónico
-        val int = Intent(Intent.ACTION_SENDTO).apply {
-        data = Uri.parse("mailto:$destinatario") // El URI especifica el destinatario del correo
-        putExtra(Intent.EXTRA_SUBJECT, asunto) // Asigna el asunto del correo
-        }
-
-        // Verifica si hay una aplicación de correo disponible para manejar el intent
-        if (int.resolveActivity(packageManager) != null) {
-        startActivity(int)
-        } else {
-
-
-            getText(error(R.id.mensajeError));
-
-
-         }
-
-
-        }
-
-*/
-
-
-
-
-
-//esto funca
         private fun enviarCorreo() {
     val destinatario = "RETROWARE@gmail.com"
     val asunto = "Consulta de la app ${getString(R.string.app_name)}"
@@ -113,49 +79,4 @@ class CreditActivity : AppCompatActivity() {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
