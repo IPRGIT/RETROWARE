@@ -20,6 +20,4 @@
         android:title="User INFO"
         app:showAsAction="ifRoom"/>
 
-
-
 </menu>

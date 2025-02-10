@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recycler_view">
 
-
         <fragment
             android:id="@+id/itemListFragment2"
             android:name="com.marisma.retroware.ItemListFragment"
@@ -20,7 +19,5 @@
             android:name="com.marisma.retroware.UserInfoFragment"
             android:label="fragment_user_info"
             tools:layout="@layout/fragment_user_info" />
-
-
 
 </navigation>

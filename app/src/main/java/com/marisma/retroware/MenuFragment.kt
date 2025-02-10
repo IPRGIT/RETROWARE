@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.marisma.retroware.databinding.FragmentMenuBinding
 import com.marisma.retroware.databinding.FragmentFavItemListBinding
 
-
+/**
 class MenuFragment : Fragment() {
 
     private var _binding: FragmentMenuBinding? = null
@@ -30,4 +30,56 @@ class MenuFragment : Fragment() {
 
 
 
+}
+
+*/
+
+
+class MenuFragment : Fragment() {
+
+    private var _binding: FragmentMenuBinding? = null
+    private val binding get() = _binding!!
+    private val args: MenuFragmentArgs by navArgs()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val navController = findNavController()
+        binding.menubar.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.favoritos -> {
+                    replaceFragment(FavItemListFragment())
+                    true
+                }
+                R.id.userinfo -> {
+                    replaceFragment(UserInfoFragment())
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        childFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

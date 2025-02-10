@@ -55,7 +55,7 @@ class LoginFragment : Fragment() {
 
             if (usernameInput.isNotEmpty()) {
                 // Navegar a UserInfoFragment con el nombre de usuario
-                val action = LoginFragmentDirections.actionLoginFragment2ToViewPagerFragment(user = usernameInput)
+                val action = LoginFragmentDirections.actionLoginFragment2ToViewPagerFragment()
                 findNavController().navigate(action)
             } else {
                 Toast.makeText(requireContext(), "Por favor, introduce tu nombre", Toast.LENGTH_SHORT).show()
