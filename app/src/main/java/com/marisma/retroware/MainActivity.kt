@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         // Deshabilitar el título en la ActionBar
         supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        //HACER COMMIT
 
         // Incluye un controlador de navegación. fragmentcontainerView2 es el host de navegación.
         val navFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
