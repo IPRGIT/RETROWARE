@@ -6,6 +6,22 @@
     app:startDestination="@id/loginFragment2">
 
 
+    <fragment
+        android:id="@id/menuFragment"
+        android:name="com.marisma.retroware.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+    <action
+
+        android:id="@+id/action_MenuFragment_To_userInfoFragment"
+        app:destination="@id/userInfoFragment" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+
+    </action>
+
+    </fragment>
 
 
     <fragment
@@ -13,6 +29,9 @@
         android:name="com.marisma.retroware.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
+        <argument
+            android:name="username"
+            app:argType="string" />
 
         <action
             android:id="@+id/action_viewPagerFragment_to_tabNotice1"
@@ -36,7 +55,11 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment2_to_viewPagerFragment"
-            app:destination="@id/viewPagerFragment" />
+            app:destination="@id/viewPagerFragment" >
+            <argument
+                android:name="username"
+                app:argType="string" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/tabNotice1"
@@ -71,7 +94,7 @@
         <argument
             android:name="user"
             app:argType="string"
-            android:defaultValue="Invitado"/>
+            />
     </fragment>
 
 

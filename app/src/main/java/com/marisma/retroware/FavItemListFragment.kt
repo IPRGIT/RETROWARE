@@ -5,55 +5,54 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.marisma.retroware.adapter.VideojuegoAdapter
+import com.marisma.retroware.databinding.FragmentFavItemListBinding
+import androidx.navigation.fragment.findNavController
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FavItemListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FavItemListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentFavItemListBinding? = null
+    private val binding get() = _binding!!
+    private val sharedViewModel: SharedViewModel by activityViewModels()
+    private lateinit var adapter: VideojuegoAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fav_item_list, container, false)
+    ): View {
+        _binding = FragmentFavItemListBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FavItemListFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FavItemListFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Filtrar solo los videojuegos que están marcados como favoritos
+        adapter = VideojuegoAdapter(
+            sharedViewModel.favoritos.value ?: emptyList(),
+            onClickListener = { videojuego ->
+                val action = FavItemListFragmentDirections
+                    .actionFavItemListFragmentToDetailFavItemFragment(videojuego)
+                findNavController().navigate(action)
+            },
+            onFavoriteClickListener = { videojuego ->
+                videojuego.esFavorito = !videojuego.esFavorito
+                if (!videojuego.esFavorito) {
+                    sharedViewModel.eliminarFavorito(videojuego)
                 }
+                adapter.notifyDataSetChanged()
             }
+        )
+
+        binding.RecyclerViewFavoritos.layoutManager = LinearLayoutManager(requireContext())
+        binding.RecyclerViewFavoritos.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/favourites_navigation"
-    app:startDestination="@id/favoriteFragment">
+    app:startDestination="@id/favItemListFragment">
 
 
 
     <fragment
-        android:id="@+id/favoriteFragment"
+        android:id="@+id/favItemListFragment"
         android:name="com.marisma.retroware.FavItemListFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favourite" />
+        tools:layout="@layout/fragment_fav_item_list" />
 
 </navigation>
 

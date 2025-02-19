@@ -6,7 +6,6 @@
     android:background="@color/miazul">
 
 
-
     <!-- Imagen (40%) -->
     <ImageView
         android:id="@+id/imageView"
@@ -18,9 +17,6 @@
         android:src="@drawable/logo_rs"
         android:scaleType="centerInside"
         tools:ignore="MissingConstraints"/>
-
-
-
 
 
 

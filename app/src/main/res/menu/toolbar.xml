@@ -11,7 +11,7 @@
     <item
         android:id="@+id/favoritos"
         android:icon="@drawable/ic_favs_menu"
-        android:title="Favoritos"
+        android:title="Favs"
         app:showAsAction="ifRoom"/>
 
     <item
@@ -19,5 +19,4 @@
         android:icon="@drawable/ic_userinfo_menu"
         android:title="User INFO"
         app:showAsAction="ifRoom"/>
-
 </menu>

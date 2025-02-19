@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RETROWARE</string>
+    <string name="bienvenido">BIENVENIDO/A</string>
+    <string name="btnInfo">App Info.</string>
+    <string name="usuario">Indroduzca el nombre de usuario</string>
+    <string name="versioninfo">%s estás usando la versión 1.0 de %s</string>
+    <string name="app_info">Descripción de la aplicaión:</string>
+    <string name="descripcion">El portal para descargar y compartir el mejor abandonware.</string>
+    <string name="error">No se encontraron apps instaladas para enviar correos.</string>
+    <string name="tab1text">!BIENVENIDO/A¡</string>
+    <string name="tab2text">COMENZAR</string>
+    <string name="btnhome">Ir a about</string>
+    <string name="app_version">2.0</string>
+    <string name="btnStart">EMPEZAR</string>
+    <string name="email_contacto">RETROWARE@gmail.com</string>
+    <string name="email_asunto">Consulta de la app RETROWARE</string>
+    <string name="email_cuerpo">Escriba aquí la consulta que desee realizar</string>
+    <string name="profile_image_description">Foto de perfil</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Mensjaes</string>
+    <string name="sync_header">Sincronizar</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Tu firma</string>
+    <string name="reply_title">Acción por defecto</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronizar correo electrónico periódicamente</string>
+    <string name="attachment_title">Descargar los siguientes archivos adjuntos</string>
+    <string name="attachment_summary_on">Descargar automáticamente los archivos adjuntos de los correos entrantes
+    </string>
+    <string name="attachment_summary_off">Sólo descargar los archivos adjuntos cuándo se especifique manualmente</string>
+
+
+
+
+</resources>

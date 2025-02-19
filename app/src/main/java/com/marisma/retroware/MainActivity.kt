@@ -1,3 +1,4 @@
+
 package com.marisma.retroware
 
 import android.content.Intent
@@ -6,6 +7,9 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,9 +17,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Cargar el LoginFragment por defecto
-        /**supportFragmentManager.beginTransaction()
-        .replace(R.id.navHostFragment, LoginFragment())
-        .commit()*/
+        // Deshabilitar el título en la ActionBar
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // Incluye un controlador de navegación. fragmentcontainerView2 es el host de navegación.
+        val navFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navController = navFragment.navController
+
+        // Establece la barra con controles
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.navHostFragment)
+        return navController.navigateUp()
     }
 }
