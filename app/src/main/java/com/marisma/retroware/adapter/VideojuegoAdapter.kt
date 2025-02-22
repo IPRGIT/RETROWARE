@@ -29,5 +29,7 @@ class VideojuegoAdapter(
     fun updateList(newList: List<Videojuego>) {
         ListaVideojuegos = newList // Ahora es válido porque `ListaVideojuegos` es `var`
         notifyDataSetChanged()
+
+        //COMMIT 2
     }
 }
