@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Day mode -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="miazul"> #0a0889</color>
+    <color name="miazul">#0a0889</color>
     <color name="miazulClaro">#03A9F4</color>
     <color name="celeste">#89DAFF</color>
     <color name="green">#4CAF50</color>
     <color name="red">#E91E63</color>
     <color name="purple">#9C27B0</color>
 
-
+    <!-- Night mode -->
+    <color name="night_primary">#BB86FC</color>
+    <color name="night_primary_variant">#3700B3</color>
+    <color name="night_on_primary">#000000</color>
+    <color name="night_secondary">#03DAC6</color>
+    <color name="night_secondary_variant">#018786</color>
+    <color name="night_on_secondary">#000000</color>
+    <color name="night_surface">#121212</color>
+    <color name="night_on_surface">#FFFFFF</color>
+    <color name="night_background">#121212</color>
+    <color name="night_on_background">#FFFFFF</color>
+    <color name="night_error">#CF6679</color>
+    <color name="night_on_error">#000000</color>
+    <color name="night_purple">#BB86FC</color>
+    <color name="night_miazulClaro">#03DAC6</color>
 </resources>

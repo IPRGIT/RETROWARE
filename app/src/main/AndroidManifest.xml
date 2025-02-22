@@ -4,7 +4,7 @@
 
 
 
-    <!--permiso par utilizar internet-->
+
     <uses-permission android:name="android.permission.INTERNET"/>
 
 
