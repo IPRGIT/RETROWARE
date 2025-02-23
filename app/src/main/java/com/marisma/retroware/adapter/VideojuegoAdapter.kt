@@ -30,6 +30,5 @@ class VideojuegoAdapter(
         ListaVideojuegos = newList // Ahora es válido porque `ListaVideojuegos` es `var`
         notifyDataSetChanged()
 
-        //COMMIT 2
     }
 }

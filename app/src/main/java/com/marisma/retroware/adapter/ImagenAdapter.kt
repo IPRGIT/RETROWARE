@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.marisma.retroware.databinding.ItemImagenBinding
 
+//COMMIT
 class ImagenAdapter(private val imagenes: List<String>) : RecyclerView.Adapter<ImagenAdapter.ImagenViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagenViewHolder {
